@@ -1,0 +1,129 @@
+<extend name="Public:layout"/>
+<block name="main-content">
+    <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home home-icon"></i>
+                    <a href="__APP__/index/index.html">主页</a>
+                </li>
+
+                <li>
+                    <a href="#">网站信息管理</a>
+                </li>
+                <li class="active">网站配置</li>
+            </ul><!-- .breadcrumb -->
+
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
+                    <span class="input-icon">
+                        <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                        <i class="icon-search nav-search-icon"></i>
+                    </span>
+                </form>
+            </div><!-- #nav-search -->
+        </div>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    网站信息管理
+                    <small>
+                        <i class="icon-double-angle-right"></i>
+                        网站配置
+                    </small>
+                </h1>
+            </div><!-- /.page-header -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- PAGE CONTENT BEGINS -->
+
+                    <form class="form-horizontal" action='__CONTROLLER__/update' role="form" method='post' enctype='multipart/form-data'>
+                        <br/>  <br/>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 网站名称：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" id="form-field-1"  class="col-xs-10 col-sm-5"  name="title" value="{$webinfo['title']}"/>
+
+                            </div>
+
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2">网站关键词：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name='keywords' id="form-field-2"  class="col-xs-10 col-sm-5"
+                                       name="keywords" value="{$webinfo['keywords']}"/>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2">网站描述：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="description" id="form-field-2"  class="col-xs-10 col-sm-5" value="{$webinfo['description']}" />
+
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2">网站状态：</label>
+
+                            <div class="col-sm-9">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input name="isopen" type="radio" value="1" {$webinfo['isopen'] ? 'checked':''} />开启  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input name="isopen" type="radio" value="0" {$webinfo['isopen'] ? '':'checked'}/>关闭
+
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2">网站版权：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="copyright" id="form-field-2" class="col-xs-10 col-sm-5" value="{$webinfo['copyright']}" />
+
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2">ICP备案号：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="icpno" id="form-field-2" class="col-xs-10 col-sm-5" value="{$webinfo['icpno']}"/>
+
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2">网站LOGO：</label>
+
+                            <div class="col-sm-9">
+                                <div id='view' style=" width:416px;height:110px;border:1px solid #ddd;overflow:hidden;">
+                                    <img id="imghead" width="416" height="110" border=0  src='__PUBLIC__/home/images/logo1.png'/>
+                                </div>
+                                <br/>
+                                <input type="file" name="upload"/>
+                            </div>
+                        </div>
+
+                        <div class="clearfix form-actions">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type='submit' name='sub' class="btn btn-info" value='submit'/>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+</block>

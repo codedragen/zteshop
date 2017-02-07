@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<eq name="Think.session.isopen" value='0'>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+	body {
+		background: url("__PUBLIC__/home/images/bg.gif"); font: 12px/180% Arial, Helvetica, sans-serif, Verdana; margin: 0px; color: rgb(90, 90, 90); font-size-adjust: none; font-stretch: normal;
+	}
+	html {
+		-webkit-text-size-adjust: none;
+	}
+	body {
+		-webkit-text-size-adjust: none;
+	}
+	table {
+		font: 12px/180% Arial, Helvetica, sans-serif, Verdana; color: rgb(90, 90, 90); font-size-adjust: none; font-stretch: normal;
+	}
+	td {
+		font: 12px/180% Arial, Helvetica, sans-serif, Verdana; color: rgb(90, 90, 90); font-size-adjust: none; font-stretch: normal;
+	}
+	table {
+		border-collapse: collapse; border-spacing: 0; empty-cells: show;
+	}
+	th {
+		border-collapse: collapse;
+	}
+	td {
+		border-collapse: collapse;
+	}
+	a:link {
+		color: rgb(90, 90, 90); text-decoration: none;
+	}
+	a:visited {
+		color: rgb(90, 90, 90); text-decoration: none;
+	}
+	a:hover {
+		color: rgb(255, 78, 0); text-decoration: none;
+	}
+	img {
+		border: 0px currentColor;
+	}
+	div {
+		margin: 0px; padding: 0px;
+	}
+	p {
+		margin: 0px; padding: 0px;
+	}
+	img {
+		margin: 0px; padding: 0px;
+	}
+	ul {
+		margin: 0px; padding: 0px;
+	}
+	li {
+		margin: 0px; padding: 0px;
+	}
+	form {
+		margin: 0px; padding: 0px;
+	}
+	input {
+		margin: 0px; padding: 0px;
+	}
+	label {
+		margin: 0px; padding: 0px;
+	}
+	span {
+		margin: 0px; padding: 0px;
+	}
+	dl {
+		margin: 0px; padding: 0px;
+	}
+	dt {
+		margin: 0px; padding: 0px;
+	}
+	dd {
+		margin: 0px; padding: 0px;
+	}
+	h1 {
+		margin: 0px; padding: 0px;
+	}
+	h2 {
+		margin: 0px; padding: 0px;
+	}
+	h3 {
+		margin: 0px; padding: 0px;
+	}
+	h4 {
+		margin: 0px; padding: 0px;
+	}
+	h5 {
+		margin: 0px; padding: 0px;
+	}
+	h6 {
+		margin: 0px; padding: 0px;
+	}
+	ol {
+		list-style-type: none;
+	}
+	ul {
+		list-style-type: none;
+	}
+	li {
+		list-style-type: none;
+	}
+	.overz {
+		overflow: auto; overflow-x: hidden; overflow-y: hidden; zoom: 1;
+	}
+	.mn_12 {
+		margin-bottom: 12px;
+	}
+	.font_14 {
+		font-size: 14px;
+	}
+	.font_15 {
+		font-size: 14px;
+	}
+	.font_16 {
+		font-size: 16px;
+	}
+	.orange_fontc {
+		color: rgb(255, 78, 0);
+	}
+	.site_under {
+		margin: 0px auto; text-align: center;
+	}
+</style>
+</head>
+
+<body>
+<div class="site_under"><img width="960" height="449" src="__PUBLIC__/home/images/site_under_main.jpg" alt=""></div>
+</body>
+</html>
+
+
+<else/>
+
+<head>
+    <title>{$config.title}</title>
+    <meta name="keywords" content="{$config.keywords}" />
+    <meta name="description" content="{$config.description}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <!--ZTE CSS begin-->
+    <link href="__PUBLIC__/home/css/basic.css" rel="stylesheet" />
+    <link href="__PUBLIC__/home/css/common.css" rel="stylesheet" />
+    <link href="__PUBLIC__/home/css/fontello.css" rel="stylesheet" />   
+    <!--ZTE CSS end-->
+    <!--ZTE JS begin-->
+    <script type="text/javascript" src="__PUBLIC__/home/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/js/jquery.dbcMessage.js"></script>
+   
+    <script type="text/javascript" src="__PUBLIC__/home/js/cloud-zoom.1.0.1.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/js/js.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/js/layout.js-t=201205310959.js" > </script>
+
+    <!--ZTE JS end-->
+
+      <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "__PUBLIC__/home/js/hm.js-2460548f7273e134eeec7ceec2087037.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+     </script>
+   
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            //DBCMvcLayout.LoadGlobalJs();
+            //DBCMvcLayout.LoadCategoryJs();
+            var isCheckCode = '';
+            if (isCheckCode == '1') {
+                //var isMaskCodeCheck = DBCMvcLayout.readCookie('MaskCodeCheck');
+                if (isMaskCodeCheck != '1') {
+                    $.blockUI({
+                        message: $('#initMask'),
+                        overlayCSS: {
+                            backgroundColor: '#000',
+                            opacity: '0.7'
+                        }
+                    });
+                }
+            }
+            var sk = getUrlParam('sk');
+            if (sk && sk.toLowerCase() != "none") {
+                //DBCMvcLayout.createCookie('sk', sk, 500 * 365);
+            }
+        });
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+        
+    </script>
+
+
+
+
+</head>
+<body>
+  <div class="weibox">
+  <ul>
+    <li class="weixin">
+      <div class="weixin-logo"></div>
+    </li>
+    <li class="idea"></li>
+    <li class="app">
+      <div class="app-logo"></div>
+    </li>
+  </ul>
+</div>
+
+<!--header start-->
+<div id="header">
+	<div class="header">
+		<a href="javascript:void(0)" class="shop_Name">中兴手机商城</a>
+		<div id="logininfo" class="login_register">
+			{:W("UserInfo/getUserInfo")}
+		</div>
+		<ul class="header_List">
+			<li class="my_Order">
+				<if condition="$_SESSION['isLogin']">
+				<a href="__APP__/person/myorder.html" target="_blank"><i></i>我的订单</a>
+				<else/>
+				<a href="__APP__/login/index.html" target="_blank"><i></i>我的订单</a>
+				</if>
+			</li>
+			<li class="header_Service">
+				<a href="__APP__/help/after_sale.html" target="_blank">售后服务<i></i></a>
+				<div class="down_List" style="width: 94px;">
+					<a href="__APP__/help/repair_policy.html">保修政策</a>
+					<a href="__APP__/help/exchange.html">退换货政策</a>
+					<a href="__APP__/help/exchange_policy.html">退换货流程</a>
+					<a href="__APP__/help/after_sale.html">售后网点</a>
+				</div>
+			</li>
+			<li class="help_Center_Down">
+				<a href="__APP__/help/shopping_item.html" target="_blank">帮助中心<i></i></a>
+				<div class="down_List" style="width: 93px;">
+					<a href="__APP__/help/shopping_item.html">购物指南</a>
+					<a href="__APP__/help/send_item.html">配送指南</a>
+					<a href="__APP__/help/pay_method.html">支付方式</a>
+				</div>
+			</li>
+		</ul>
+		<div class="telephone">
+			<i></i>全年无休热线
+		</div>
+	</div>
+</div>
+<link href="__PUBLIC__/home/css/Site1024.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="__PUBLIC__/home/css/LayoutHelp.chirp.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="__PUBLIC__/home/css/article.chirp.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="__PUBLIC__/home/css/help.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="__PUBLIC__/home/js/help.min.js" type="text/javascript"> </script>
+
+<!--header_Middle start-->
+<div id="header_Middle">
+    <div class="header_Middle">
+        <div class="logo">
+            <a href="javascript:void(0)">
+                <img src="__PUBLIC__/home/images/logo1.png" alt="" border="0" />
+			</a>
+        </div>
+        <div class="keyword_Search">
+            
+            <div class="search_Area" onkeypress="javascript:return DBCMvcLayout.WebForm_FireDefaultButton(event, 'btnProductSearch');">
+<!--             <form id="sous" action="__APP__/index/month_sale.html" >
+ -->            <input type="text" id="txtsearchinput" name="search" class="search_Box" onfocus="DBCMvcLayout.CheckSearchText(this)" onblur="DBCMvcLayout.InitSearchText(this)" placeholder="请输入品牌或商品进行搜" maxlength="50" autocomplete="off" />
+                <button id="btnProductSearch" class="search_Btn" title="搜索" value=""></button>
+            
+            </div>
+            <div class="shopping_Cart">
+                <a href="cart.html" class="cartBtn"></a>
+                <div id="showcartlist">
+					<div class="cart_Box">
+						<div class="itemno">亲，您的购物车中暂无商品</div>
+						{:W("Cartinfo/cartinfo")}
+					</div>
+				</div>
+            </div>
+          <div class="keyword clearFix">
+				<a href="__APP__/index/month_sale/search/星星" style="color: rgb(0, 0, 0);">星星2号</a>
+				<a href="__APP__/index/month_sale/search/天机" style="color: rgb(0, 0, 0);">天机</a>
+				<a href="__APP__/index/month_sale/search/spr"  style="color: rgb(255, 0, 0);">SPRO2</a>
+				<a href="__APP__/index/month_sale/search/axon" style="color: rgb(255, 0, 0);">AXON</a>
+				<a href="__APP__/index/month_sale/search/儿童" style="color: rgb(0, 0, 0);">儿童机</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav" name="nav">
+    <div class="nav_Left po">
+        <b>所有商品分类</b>
+        <div class="all" style="z-index:999;display:none;">
+			<div class="classification">
+				<h3><a href="__APP__/index/phones/rance/S">手机</a></h3>
+				<a href="__APP__/index/large_screen/vest/S1" class="kind">旗舰机</a>
+				<a href="__APP__/index/large_screen/vest/S3" class="kind">大屏机</a>
+				<a href="__APP__/index/large_screen/vest/S2" class="kind">千元机</a>
+				<a href="__APP__/index/large_screen/vest/S4" class="kind">儿童机</a>
+				<div class="clearFix"></div>
+				<div class="line"></div>
+				<div class="nav_Show">
+					<div class="nav_Show_Left">
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/S1">旗舰机</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/S1/postfix/S1_1">天机</a><span>|</span>
+								<a href="__APP__/index/sky/vest/S1/postfix/S1_2">星星</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/S3">大屏机</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/S3/postfix/S3_1">MEMO/S6</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/S2">千元机</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/S2/postfix/S2_1">青漾&小鲜</a><span>|</span>
+								<a href="__APP__/index/sky/vest/S2/postfix/S2_2">Q系列</a><span>|</span>
+								<a href="__APP__/index/sky/vest/S2/postfix/S2_3">U系列</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/S4">儿童机</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/S4/postfix/S4_1">儿童机</a><span>|</span>
+								<a href="__APP__/index/sky/vest/S4/postfix/S4_2">老人机</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="nav_Show_Right"></div>
+				</div>
+			</div>
+			<div class="classification">
+				<h3><a href="__APP__/index/saler_mode/rance/Y">运营商</a></h3>
+				<a href="__APP__/index/saler/vest/Y1" class="kind">移动制式</a>
+				<a href="__APP__/index/saler/vest/Y2" class="kind">联通制式</a>
+				<a href="__APP__/index/saler/vest/Y3" class="kind">电信制式</a>
+				<div class="clearFix"></div>
+				<div class="line"></div>
+				<div class="nav_Show">
+					<div class="nav_Show_Left">
+						<dl>
+							<dt><a href="__APP__/index/saler/vest/Y1">移动制式</a></dt>
+							<dd><a href="__APP__/index/saler/vest/Y1">移动制式</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/saler/vest/Y2">联通制式</a></dt>
+							<dd><a href="__APP__/index/saler/vest/Y2">联通制式</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/saler/vest/Y3">电信制式</a></dt>
+							<dd><a href="__APP__/index/saler/vest/Y3">电信制式</a></dd>
+						</dl>
+					</div>
+					<div class="nav_Show_Right"></div>
+				</div>
+			</div>
+			<div class="classification">
+				<h3><a href="__APP__/index/phones/rance/P">配件</a></h3>
+				<a href="__APP__/index/large_screen/vest/P1" class="kind">存储产品</a>
+				<a href="__APP__/index/large_screen/vest/P2" class="kind">电池充电</a>
+				<a href="__APP__/index/large_screen/vest/P3" class="kind">外饰保护</a>
+				<a href="__APP__/index/large_screen/vest/P4" class="kind">其他配件</a>
+				<div class="clearFix"></div>
+				<div class="line"></div>
+				<div class="nav_Show">
+					<div class="nav_Show_Left">
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/P1">存储产品</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/P1/postfix/P1_1">读卡器</a><span>|</span>
+								<a href="__APP__/index/sky/vest/P1/postfix/P1_2">存储卡</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/P2">电池充电</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/P2/postfix/P2_1">充电器</a><span>|</span>
+								<a href="__APP__/index/sky/vest/P2/postfix/P2_2">电池</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/P3">外饰保护</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/P3/postfix/P3_1">皮套</a><span>|</span>
+								<a href="__APP__/index/sky/vest/P3/postfix/P3_2">贴膜</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/P4">其他配件</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/P4/postfix/P4_1">保护袋</a><span>|</span>
+								<a href="__APP__/index/sky/vest/P4/postfix/P4_2">车载支架</a><span>|</span>
+								<a href="__APP__/index/sky/vest/P4/postfix/P4_3">数据线</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="nav_Show_Right"></div>
+				</div>
+			</div>
+			<div class="classification">
+				<h3><a href="__APP__/index/phones/rance/E">耳机音频</a></h3>
+				<a href="__APP__/index/large_screen/vest/E1" class="kind">蓝牙耳机</a>
+				<a href="__APP__/index/large_screen/vest/E2" class="kind">蓝牙音箱</a>
+				<a href="__APP__/index/large_screen/vest/E3" class="kind">有线耳机</a>
+				<div class="clearFix"></div>
+				<div class="line"></div>
+				<div class="nav_Show">
+					<div class="nav_Show_Left">
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/E1">蓝牙耳机</a></dt>
+							<dd>
+								<a href="__APP__/index/sky/vest/E1/postfix/E1_1">入耳式</a><span>|</span>
+								<a href="__APP__/index/sky/vest/E1/postfix/E1_2">耳塞式</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/E2">蓝牙音箱</a></dt>
+							<dd><a href="__APP__/index/sky/vest/E2/postfix/E2_1">蓝牙音箱</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/E3">有线耳机</a></dt>
+							<dd><a href="__APP__/index/sky/vest/E3/postfix/E3_1">有线耳机</a></dd>
+						</dl>
+					</div>
+					<div class="nav_Show_Right"></div>
+				</div>
+			</div>
+			<div class="classification">
+				<h3><a href="__APP__/index/phones/rance/K">宽带终端</a></h3>
+				<a href="__APP__/index/large_screen/vest/K1" class="kind">摄像头</a>
+				<a href="__APP__/index/large_screen/vest/K2" class="kind">无线路由</a>
+				<a href="__APP__/index/large_screen/vest/K3" class="kind">网络盒子</a>
+				<a href="__APP__/index/large_screen/vest/K4" class="kind">便携投影</a>
+				<div class="clearFix"></div>;
+				<div class="line"></div>
+				<div class="nav_Show">
+					<div class="nav_Show_Left">
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/K1">摄像头</a></dt>
+							<dd><a href="__APP__/index/sky/vest/K1/postfix/K1_1">摄像头</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/K2">无线路由</a></dt>
+							<dd><a href="__APP__/index/sky/vest/K2/postfix/K2_1">无线路由</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/K3">网络盒子</a></dt>
+							<dd><a href="__APP__/index/sky/vest/K3/postfix/K3_1">网络盒子</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/K4">便携投影</a></dt>
+							<dd><a href="__APP__/index/sky/vest/K4/postfix/K4_1">便携投影</a></dd>
+						</dl>
+					</div>
+					<div class="nav_Show_Right"></div>
+				</div>
+			</div>
+			<div class="classification">
+				<h3><a href="__APP__/index/phones/rance/Z">增值服务</a></h3>
+				<a href="__APP__/index/large_screen/vest/Z1" class="kind">保修服务</a>
+				<a href="__APP__/index/large_screen/vest/Z2" class="kind">移动办公</a>
+				<div class="clearFix"></div>
+				<div class="line"></div>
+				<div class="nav_Show">
+					<div class="nav_Show_Left">
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/Z1">保修服务</a></dt>
+							<dd><a href="__APP__/index/sky/vest/Z1/postfix/Z1_1">保修服务</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="__APP__/index/large_screen/vest/Z2">移动办公</a></dt>
+							<dd><a href="__APP__/index/sky/vest/Z2/postfix/Z2_1">BYOD移动办公</a></dd>
+						</dl>
+					</div>
+					<div class="nav_Show_Right"></div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+	<ul class="nav_List">
+		<li>
+			<a href="__APP__/index/zte_first.html">
+			<b>首页</b></a>
+		</li>
+		<li>
+			<a href="__APP__/index/hot_store/vest/S1">
+			<b>旗舰热门机</b></a>
+		</li>
+		<li>
+			<a href="__APP__/index/month_sale.html">
+			<b>本月特惠</b></a>
+		</li>
+		<li class="pull_Down"><a href=""><i></i>
+			<b>星星论坛</b></a><dl class="pull_Down_List">
+			<dd><a href="__APP__/help/star_discuz.html">星星论坛</a></dd>
+			<dd><a href="__APP__/help/sina.html">新浪微博</a></dd></dl>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".nav_Left").hover(
+            function () {
+                $(".all").show();
+             
+        },
+            function () {
+                $(".all").hide();
+            });
+    })
+//判断购物车里面是否有商品存在切换状态栏	
+if($('.goodsinfo_big').length >=1){
+$('.itemno').css('display','none');
+}else{
+$('.itemno').css('display','block');
+$('.goodsinfo').css('display','none');
+}
+
+//去购物车点击事件
+$('.goodsub').click(function(){
+window.location.href = "__APP__/index/cart";
+
+});
+$('.search_Btn').click(function (){
+   var  sec=$('.search_Box').val();
+    if($('.search_Box').val()==""){
+      alert("请输入搜索内容");
+      return false;
+    }else{
+     window.location.href="__APP__/index/month_sale/search/"+sec;
+    }
+})
+    
+
+</script>
+
+<block name="main-contain">
+	
+</block>  
+
+<!--footer start-->
+<div id="footer">
+    <div class="footer">
+        <div class="guarantee">
+            <p class="seven_M">
+                <i class="seven"></i>
+                7 天退货保障
+            </p>
+            <p class="promise_M">
+                <i class="promise"></i>
+                30 天换货承诺
+            </p>
+            <p class="postage">
+                <i class="free_Postage"></i>
+                150 元起全场免运费
+            </p>
+            <p class="service">
+                <i class="customer_Service"></i>
+                1300 余家售后服务点
+            </p>
+        </div>
+        <div class="quick_Link">
+            <div class="quick_Link_Content contact_Us">
+                <h2><a href="__APP__/help/connect_us.html" target="_blank">联系我们</a></h2>
+                <a href="__APP__/help/sina.html" target="_blank">新浪微博</a>
+                <a href="__APP__/help/current_wx.html" target="_blank">官方微信</a>
+                <a href="__APP__/help/star_discuz.html" target="_blank">星星论坛</a>
+            </div>
+            <p class="spread_Line"></p>
+            <div class="quick_Link_Content help_Center">
+                <h2><a href="__APP__/help/shopping_item.html" target="_blank">帮助中心</a></h2>
+                <a href="__APP__/help/shopping_item.html" target="_blank">购物指南</a>
+                <a href="__APP__/help/send_item.html" target="_blank">配送指南</a>
+                <a href="__APP__/help/pay_method.html" target="_blank">支付方式</a>
+            </div>
+            <p class="spread_Line"></p>
+            <div class="quick_Link_Content after_Service">
+                <h2><a href="" target="_blank">售后服务</a></h2>
+                <a href="__APP__/help/repair_policy.html" target="_blank">保修政策</a>
+                <a href="__APP__/help/exchange_policy.html" target="_blank">退换货政策</a>
+                <a href="__APP__/help/exchange.html" target="_blank">退换货流程</a>
+                <a href="__APP__/help/after_sale.html" target="_blank">售后网点</a>
+            </div>
+            <p class="spread_Line"></p>
+            <div class="quick_Link_Content about_Us">
+                <h2><a href="__APP__/help/about_us.html" target="_blank">关于我们</a></h2>
+                <a href="__APP__/help/about_zte.html" target="_blank">关于中兴</a>
+                <a href="__APP__/help/xinglianda.html" target="_blank">兴联达</a>
+                <a href="__APP__/help/shop_discribe.html" target="_blank">商城简介</a>
+                <a href="__APP__/help/connect_us.html" target="_blank">联系我们</a>
+            </div>
+            <div class="hotline">
+                <strong>400-880-9999</strong>
+                <em>周一到周日 8:30 - 20:30（全年无休）</em>
+                <a href="javascript:void(0)" target="_blank">在线客服</a>
+            </div>
+        </div>
+
+        <div class="clearFix friend_Link">
+            <dl>
+                <dt>友情链接：</dt>
+				{:W('Flink/getFlink')}
+            </dl>
+        </div>
+        <div class="copyright">
+            <p>
+                <a href="">星星论坛</a>|
+				<a href="">中兴通讯</a>|
+				<a href="">汇天地</a>|
+				<a href="">中兴云服务</a>|
+				<a href="">中兴手机</a>
+            </p>
+            <p>&copy;{$config.copyright} 中兴通讯股份有限公司 版权所有，并保留所有权利。 ICP备案证书号：
+				<a href="">{$config.icpno}</a>
+			</p>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/home/js/jquery.lazyload.min.js-t=.js" type="text/javascript"> </script>
+</body>
+</eq>
+</html>

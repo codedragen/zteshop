@@ -1,0 +1,78 @@
+<extend name="Public:layout" />
+<block name="main-content">
+		
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home home-icon"></i>
+				<a href="__APP__/index/index">主页</a>
+			</li>
+			<li>
+				<a href="#">商品管理</a>
+			</li>
+			<li class="active">商品添加</li>
+		</ul>
+<br>
+ <form action="__CONTROLLER__/add" method="post" enctype="multipart/form-data">
+      <p>&nbsp;商 品 名：<input type="text" name="goodsname"></p>
+      <p>&nbsp;商品编号：<input type="text" name="goodsnum"> | 当前编号MAX值：<b style="color:red">{$max.goodsnum}</b></p>
+      <p>&nbsp;商品描述：<input type="text" name="message"></p>
+	  <p>&nbsp;商品价格：<input type="text" name="price"></p>
+      <p>&nbsp;商品颜色： <input type="radio" name="color" value="4">白色
+	                       <input type="radio" name="color" value="5">黑色
+						   <input type="radio" name="color" value="6">粉色
+						   <input type="radio" name="color" value="7">金色
+						   <input type="radio" name="color" value="8">银色 
+						   <input type="radio" name="color" value="9">蓝色 
+						   <input type="radio" name="color" value="10">荧光绿
+	  </p>
+      <p>&nbsp;商品库存：<input type="text" name="stocks"></p>
+	  <p>&nbsp;商品热销：&nbsp;<input type="radio" name="hot" value="1">否
+	                      &nbsp;<input type="radio" name="hot" value="2">是
+	  </p>
+	  <p>&nbsp;商品新品：&nbsp;<input type="radio" name="newgoods" value="1">否
+	                      &nbsp;<input type="radio" name="newgoods" value="2">是
+	  </p>
+      <p class="vest" id="ve">&nbsp;商品分类：<select name="vest">
+	                         <option value="0">--请选择--</option>
+	                         <option value="S1">旗舰机</option>
+	                         <option value="S2">千元机</option>
+	                         <option value="S3">大屏机</option>
+	                         <option value="S4">儿童机</option>
+	                         <option value="Y1">移动制式</option>
+	                         <option value="Y2">联通制式</option>
+	                         <option value="Y3">电信制式</option>
+	                         <option value="P1">储存产品</option>
+	                         <option value="P2">电池充电</option>
+	                         <option value="P3">外饰保护</option>
+	                         <option value="P4">其他配件</option>
+	                         <option value="E1">蓝牙/耳机</option>
+	                         <option value="E2">蓝牙/音响</option>
+	                         <option value="E3">有线耳机</option>
+	                         <option value="K1">摄像头</option>
+	                         <option value="K2">无线路由</option>
+	                         <option value="K3">网络盒子</option>
+	                         <option value="K4">便携摄影</option>
+	                         <option value="Z1">保修服务</option>
+	                         <option value="Z2">移动办公</option> 
+	                     </select>
+	  </p>
+      <p class="rance" id="ran">&nbsp;商品归属：<select name="rance">
+	                          <option value="0">--请选择--</option>
+	                          <option value="S">手机</option>
+	                          <option value="Y">运营商</option>
+	                          <option value="P">配件</option>
+	                          <option value="E">耳机/音频</option>
+	                          <option value="K">宽带终端</option>
+	                          <option value="Z">增值服务</option>
+	                     </select>
+	  </p>
+     
+      <p class="postfix" id="fix">&nbsp;商品后缀：<input type="text" name="postfix" value="{$goods.postfix}"></p>
+	  <p><span class="pic" id="pic1">商品图片:</span><input type="file" name="pic[]" multiple class="sub" id="ssub"></p><br><br>
+	  <input type="hidden" name="did" value="{$max.goodsnum}">
+      <input type="reset" name="reset" value="重置" id="sub11">
+	  <input type="submit" name="sub" value="添加"  id="sub22">
+ </form>
+
+
+</block>

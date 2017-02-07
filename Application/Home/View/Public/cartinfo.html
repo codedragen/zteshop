@@ -1,0 +1,16 @@
+<div class="goodsinfo">
+   <foreach name="data" item="goods">
+	<div class="goodsinfo_big">
+	     <div class="goodsinfo_big_1">
+	        <img src="__PUBLIC__/upload/{$goods.firstpic}" style="width:58px;height:58px">
+	     </div>
+	     <div class="goodsinfo_big_2">
+	          <p style="text-overflow:ellipsis;overflow:hidden">{$goods.goodsname}</p>
+	          <p>数量：{$goods.buynum}</p>
+	          <p>总价：￥{$goods.subtotal}</p>
+	     </div>
+	</div>
+	</foreach>
+	<p class="goodsinfo_big_3">共<span> {$num} </span>件商品&nbsp;&nbsp;&nbsp;&nbsp;共计 <span>￥{$data1}</span></p>
+	<button class="goodsub">去购物车并结算</button>
+</div>

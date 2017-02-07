@@ -1,0 +1,102 @@
+<extend name="Public:layout" />
+<block name="main-content">
+
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home home-icon"></i>
+				<a href="__APP__/index/index">主页</a>
+			</li>
+			<li>
+				<a href="#">商品管理</a>
+			</li>
+			<li class="active">商品修改</li>
+		</ul>
+
+<br>
+ <form action="__CONTROLLER__/mod" method="post" enctype="multipart/form-data">
+            <p>&nbsp;商 品 名：<input type="text" name="goodsname" value="{$goods.goodsname}"></p>
+      <p>&nbsp;商品编号：<input type="text" name="goodsnum" disabled="true" value="{$goods.goodsnum}"> | 当前编号MAX值：<b style="color:red">{$max.goodsnum}</b></p>
+      <p>&nbsp;商品描述：<input type="text" name="message" value="{$goods.message}"></p>
+	  <p>&nbsp;商品价格：<input type="text" name="price" value="{$goods.price}"></p>
+      <p>&nbsp;商品颜色：  <if condition="$goods.color == 4 "><input type="radio" name="color" value="4" checked>白色
+	                         <else /><input type="radio" name="color" value="4">白色
+						   </if>
+						   <if condition="$goods.color == 5 "><input type="radio" name="color" value="5" checked>黑色
+	                         <else /><input type="radio" name="color" value="5">黑色
+						   </if>
+						   <if condition="$goods.color == 6 "><input type="radio" name="color" value="6" checked>粉色
+	                         <else /><input type="radio" name="color" value="6">粉色
+						   </if>
+						   <if condition="$goods.color == 7 "><input type="radio" name="color" value="7" checked>金色
+	                         <else /><input type="radio" name="color" value="7">金色
+						   </if>
+						   <if condition="$goods.color == 8 "><input type="radio" name="color" value="8" checked>银色
+	                         <else /><input type="radio" name="color" value="8">银色
+						   </if>
+						   <if condition="$goods.color == 9 "><input type="radio" name="color" value="9" checked>蓝色
+	                         <else /><input type="radio" name="color" value="9">蓝色
+						   </if>
+						   <if condition="$goods.color == 10 "><input type="radio" name="color" value="10" checked>荧光绿
+	                         <else /><input type="radio" name="color" value="10">荧光绿
+						   </if>
+	  </p>
+      <p>&nbsp;商品库存：<input type="text" name="stocks" value="{$goods.stocks}"></p>
+	  <p>&nbsp;商品热销：&nbsp;<if condition="$goods.hot == 1 "><input type="radio" name="hot" value="1" checked>否
+	                            <else /><input type="radio" name="hot" value="1">否
+						       </if>
+					     &nbsp;<if condition="$goods.hot == 2 "><input type="radio" name="hot" value="2" checked>是
+	                           <else /><input type="radio" name="hot" value="2">是
+						       </if>                   
+	  </p>
+	  <p>&nbsp;商品新品：&nbsp;<if condition="$goods.newgoods == 1 "><input type="radio" name="newgoods" value="1" checked>否
+	                           <else /><input type="radio" name="newgoods" value="1">否
+						       </if> 
+                         &nbsp;<if condition="$goods.newgoods == 2 "><input type="radio" name="newgoods" value="2" checked>是
+	                           <else /><input type="radio" name="newgoods" value="2">是
+						       </if> 							   
+	  </p>
+      <p class="vest">&nbsp;商品分类：<select name="vest">
+	                         <option value="0">--请选择--</option>
+	                         <option value="S1">旗舰机</option>
+	                         <option value="S2">千元机</option>
+	                         <option value="S3">大屏机</option>
+	                         <option value="S4">儿童机</option>
+	                         <option value="Y1">移动制式</option>
+	                         <option value="Y2">联通制式</option>
+	                         <option value="Y3">电信制式</option>
+	                         <option value="P1">储存产品</option>
+	                         <option value="P2">电池充电</option>
+	                         <option value="P3">外饰保护</option>
+	                         <option value="P4">其他配件</option>
+	                         <option value="E1">蓝牙/耳机</option>
+	                         <option value="E2">蓝牙/音响</option>
+	                         <option value="E3">有线耳机</option>
+	                         <option value="K1">摄像头</option>
+	                         <option value="K2">无线路由</option>
+	                         <option value="K3">网络盒子</option>
+	                         <option value="K4">便携摄影</option>
+	                         <option value="Z1">保修服务</option>
+	                         <option value="Z2">移动办公</option> 
+	                     </select>
+	  </p>
+      <p class="rance">&nbsp;商品归属：<select name="rance">
+	                                       <option value="0">--请选择--</option>
+	                                       <option value="S">手机</option>
+	                                       <option value="Y">运营商</option>
+	                                       <option value="P">配件</option>
+	                                       <option value="E">耳机/音频</option>
+	                                       <option value="K">宽带终端</option>
+	                                       <option value="Z">增值服务</option>
+	                                    </select>
+	  </p>
+      <p class="postfix">&nbsp;商品后缀：<input type="text" name="postfix" value="{$goods.postfix}"></p>
+	  <p><span class="pic">商品图片:</span><input type="file" name="pic[]" multiple class="sub"></p><br><br>
+	  <input type="hidden" name="id" value="{$goods.id}">
+      <input type="reset" name="reset" value="重置"class="sub1">
+	  <input type="submit" name="sub" value="修改" class="sub2">
+ </form>
+ <div id="goodspic">
+    <img src="__PUBLIC__/upload/{$goods.firstpic}" height="70px" class="img">
+ </div>
+
+</block>

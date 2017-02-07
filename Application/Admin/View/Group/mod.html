@@ -1,0 +1,95 @@
+<extend name="Public:layout"/>
+<block name="main-content">
+	<div class="main-content">
+		<div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home home-icon"></i>
+					<a href="__APP__/index/index">主页</a>
+				</li>
+
+				<li>
+					<a href="__CONTROLLER__/index">组管理</a>
+				</li>
+				<li class="active">修改组</li>
+			</ul>
+		</div>
+		<div class="page-content">
+			<div class="page-header">
+				<h1>
+					组管理
+					<small>
+						<i class="icon-double-angle-right"></i>
+						修改
+					</small>
+				</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">					
+					<form action="__ACTION__" method="post" class="form-horizontal" role="form">
+						<input type="hidden" name="id" value="{$group.id}">
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 组名： </label>
+							<div class="col-sm-9">
+								<input type="text" name="title" value="{$group.title}" id="form-field-1" class="col-xs-10 col-sm-5" />
+							</div>
+						</div>
+						
+						<div class="space-4"></div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 状态： </label>
+
+							<div class="col-sm-9">
+								<input type="text" name="status" value="{$group.status}" id="form-field-2" class="col-xs-10 col-sm-5" />
+								<span class="help-inline col-xs-12 col-sm-7">
+								<span class="middle">1：启用 0：禁用</span>
+							</span>
+							</div>
+						</div>
+						
+						<div class="space-4"></div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 选择规则： </label>
+
+							<div class="col-sm-9">
+								<span class="help-inline col-xs-12 col-sm-7">
+									<foreach name="rules" item="rule">
+										<label class="middle">
+											<if condition="in_array($rule['id'],explode(',',$group['rules']))">
+												<input type="checkbox" name="rules[]" value="{$rule['id']}" checked class="ace" id="id-disable-check" />
+												<else />
+												<input type="checkbox" name="rules[]" value="{$rule['id']}" class="ace" id="id-disable-check" />
+											</if>
+											<span class="lbl">{$rule['title']}　</span>
+										</label>
+									</foreach>
+								</span>
+							</div>
+						</div>
+						
+						<div class="space-4"></div>
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+								<button class="btn btn-info" type="submit">
+									<i class="icon-ok bigger-110"></i>
+									修改
+								</button>
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									重置
+								</button>
+							</div>
+						</div>
+						<div class="hr hr-24"></div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</block>

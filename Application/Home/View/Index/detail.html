@@ -1,0 +1,919 @@
+<extend name="Public:parent" />
+<block name="main-contain">
+<link href="__PUBLIC__/home/css/product.css"  rel="stylesheet" />
+<link href="__PUBLIC__/home/css/fang.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery.cycle.all.min.js" ></script>	
+<script src="__PUBLIC__/home/js/jquery-1.2.6.pack.js"></script>
+<script src="__PUBLIC__/home/js/base.js"></script>
+<script src="__PUBLIC__/home/js/lib.js"></script>
+<script src="__PUBLIC__/home/js/163css.js"></script>
+<script src="__PUBLIC__/home/js/layout.js-t=201205310959.js"></script>
+
+
+    <div id="main">
+    <div class="crumb">
+        <i></i> 
+         您最近的位置是：<a href="__APP__/index/zte_first" >首页</a> > <a href="javascript:void(0)" >手机</a> > <a href="javascript:void(0)" >详情</a>
+    </div>
+	
+<!--产品详细-->
+<div class="product_Detail">
+	  <div id="preview">
+		<div class="jqzoom" id="spec-n1">
+		<img height=350 src="__PUBLIC__/upload/{$data1.firstpic}" width=350>
+		</div>
+			<div id="spec-list">
+			
+					<img src="__PUBLIC__/upload/{$pic[0]}" width=80 height=80>
+					<img src="__PUBLIC__/upload/{$pic[1]}" width=80 height=80>
+					<img src="__PUBLIC__/upload/{$pic[2]}" width=80 height=80>
+					<img src="__PUBLIC__/upload/{$pic[3]}" width=80 height=80>
+					<img src="__PUBLIC__/upload/{$pic[4]}" width=80 height=80>
+				
+			</div>
+		</div>  
+		
+		<div class="detail_Intro">
+			<h3>{$data1.goodsname}</h3><h2></h2>
+				<h4>{$data1.message}</h4><br />
+				<dl class="price">
+					<dt style="margin:2px 0 0 80px;">中兴价：</dt>
+					<dd class="zhongxing_Price">￥{$data1.price}</dd>
+				</dl>
+				 
+			<div class="spread"></div><br />
+			<dl class="intro_List">
+				<dt>商品编号：</dt>
+				<dd>{$data1.goodsnum}</dd>
+			</dl>
+			<dl class="intro_List">
+				<dt>运　　费：</dt>
+				
+				<dd>满 150 免运费</dd>
+			</dl>
+			<dl class="intro_List">
+				<dt>服　　务：</dt>
+				<dd>由中兴商城负责发货，并提供售后服务</dd>
+			</dl>
+
+				<dl class="intro_List">
+					<dt>商品评分：</dt>
+					<dd>
+			  <img src="__PUBLIC__/home/images/yLeft.png"  class="small_img" /><img src="__PUBLIC__/home/images/yRight.png"  class="small_img"/><img src="__PUBLIC__/home/images/yLeft.png"  class="small_img" /><img src="__PUBLIC__/home/images/yRight.png"  class="small_img"/><img src="__PUBLIC__/home/images/yLeft.png"  class="small_img" /><img src="__PUBLIC__/home/images/yRight.png"  class="small_img"/><img src="__PUBLIC__/home/images/yLeft.png"  class="small_img" /><img src="__PUBLIC__/home/images/yRight.png"  class="small_img"/><img src="__PUBLIC__/home/images/yLeft.png"  class="small_img" /><img src="__PUBLIC__/home/images/yRight.png"  class="small_img"/>                </dd>
+				</dl>
+			<!--关联商品-->
+
+			<dl class="intro_List" data={$data1.id}>
+					<dt>购买数量：</dt>
+					<dd>
+						<a href="javascript:void(0)" onclick="javascript:ZTEMvcLayout.AddReduce(0);" class="reduce"></a>
+						<input name="txtQty" id="txtQty" type="text" style="height:22px;" value="1" />
+						<a href="javascript:void(0)" onclick="javascript:ZTEMvcLayout.AddNum(0);" class="add"></a>
+					</dd>
+			</dl>
+				<button  class="buy_Btn addCart" id="cart">加入购物车</button><div id="stock" data="{$data1.stocks}">库存 : {$data1.stocks}件</div>
+		</div>
+</div>
+    <!--优惠套餐-->
+<script>
+    $(function () {
+        var a = $('.choose input[type=checkbox]');
+        for (var idx = 0; idx < a.length; idx++) {
+            var ele = a[idx];
+            ele.checked = false;
+        }
+    })
+</script>
+<!--优惠套餐-->
+<div style="clear:both"></div>
+
+<div class="package tabArea">
+<div style="clear:both"></div>
+    <div class="tabhd">
+        <ul>
+            <li class="cur" id="t1">优惠套餐 1</li>
+            <li id="t2">优惠套餐 2</li>
+        </ul>
+    </div>
+	<div style="clear:both;"></div>
+    <div class="tabbd">
+
+	 <div class="item" style="display:block">
+	  <div class="package_left">
+	  
+       <ul>
+            	<li>
+						
+				<img src="__PUBLIC__/upload/{$data1.firstpic}" style="width:100px;height:110px;"/>
+                <p>{$data1.goodsname}× 1</p>
+						
+                </li>
+
+                <li class="add"><img src="__PUBLIC__/upload/add.jpg"  /></li>
+                <empty name="data6">
+                <li>
+                        
+							<a href="#">
+				<img src="__PUBLIC__/upload/first_f3_13.jpg" style="width:110px;height:110px;" />
+				<p>中兴手机延保服务 A类 全国联保贴心服务。自购机之日起延保服务自动激活。 × 1</p>
+				<span>￥158.00</span>
+                    </a>
+                        
+                </li>
+                  <else />  
+                  <li>                        
+							<img src="__PUBLIC__/upload/{$data6.pic1}" style="width:110px;height:110px;" />                    
+                  </li>
+                            <li class="add"><img src="__PUBLIC__/upload/add.jpg"  /></li>
+                  <li>                        
+							<img src="__PUBLIC__/upload/{$data6.pic2}" style="width:110px;height:110px;" />                    
+                  </li>          
+                </empty>
+        </ul>
+		
+       </div>
+	   
+		<div class="package_Right">
+			<p>原   价：￥{$data1.price}</p>
+			<em>中兴套装价：￥{$data1['price']+158-46}</em>
+			<p>立即节省：￥46.00</p>
+			
+			<button class="buy_Btn" onclick="gets('46')">加入购物车</button>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<div class="item" style="display:none">
+		<div class="package_left">
+			<ul>
+						<li>
+						
+								<img src="__PUBLIC__/upload/{$data1.firstpic}" style="width:100px;height:110px;"/>
+								<p>{$data1.goodsname}× 1</p>
+						
+						</li>
+
+					<li class="add"><img src="__PUBLIC__/upload/add.jpg"  /></li>
+					<li>
+					
+							<img src="__PUBLIC__/upload/sui.jpg" style="width:110px;height:110px;" />
+							<p>意外碎屏服务 × 1</p>
+							<span>￥58.00</span>
+					</li>
+			</ul>
+		</div>
+		<div class="package_Right">
+			<p>原   价：￥{$data1.price}</p>
+			<em>中兴套装价：￥{$data1['price']+30}</em>
+			<p>立即节省：￥28.00</p>
+			
+			<button class="buy_Btn" onclick="gets('28')">加入购物车</button>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+    </div>
+</div>
+<div style="clear:both"></div>  
+
+    <div class="bottom_Bar">
+    <div class="bottom_Left">
+            <!--热销榜-->
+            <!-- 同价位热销商品列表-->
+			<div class="hot_Sale">
+				<h2><b>HOT</b> 热销商品排行榜</h2>
+				<ul class="hot_List">
+				<foreach name="data" item="goods">
+				 <in name="goods.id" value="8,10,13,7,11">
+						<li>
+							<a href="__APP__/Index/detail/id/{$goods.id}"  target="_blank" >
+								<img src="__PUBLIC__/upload/{$goods.firstpic}" height="220" width="220" />
+								<p>{$goods.goodsname}</p>
+								<em></em>
+								<b>￥{$goods.price}</b>
+							</a>
+						</li>
+				</in>
+				</foreach>
+				  </ul>
+			</div>
+			<if condition="$looked">
+			<div class="hot_Sale">
+				<h2>最近浏览过的商品</h2>
+				 <ul class="hot_List">
+				 <foreach name="looked" item="goods">
+						<li>
+							<a href="__APP__/Index/detail/id/{$goods.id}"  target="_self">
+								<img src="__PUBLIC__/upload/{$goods.firstpic}" height="220" width="220" />
+								<p>{$goods.goodsname}</p>
+								<em></em>
+								<b>￥{$goods.price}</b>
+							</a>
+						</li>
+				 </foreach>
+				  </ul>
+			</div>
+			</if>
+     </div>
+        <!-- 商品详情、规格参数、包装清单、售后服务、客户评价 -->
+   <div class="bottom_Right tabArea"  id="pagenav">
+    <ul class="tabhd">
+        <li class="cur" id="det1" onclick="get(1)">产品简介</li>
+        <li onclick="get(2)" id="det2">规格参数</li>
+        <li onclick="get(3)" id="det3" >用户评论<span>（{$count}）</span></li>
+        <li onclick="get(4)" id="det4">售后服务</li>
+        <li onclick="get(5)" id="det5" style="width:163px;">包装清单</li>
+    </ul>
+    <div class="tabb" style="border:1px solid #CCC">
+        <!--产品简介-->
+        <div class="d1">
+            <p style="text-align: center"><img src="__PUBLIC__/upload/d1.jpg"></p>
+        </div>
+		<!--产品简介-->
+		<!--规格参数-->
+        <div class="d2" style="display:none">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="parameters_Table">
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>主体</strong>
+                            </th>
+                            <tr>
+                                <td class="first">颜色</td>
+                                <td></td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">操作系统版本</td>
+                                <td>Android4.4</td>
+                            </tr>
+                            <tr>
+                                <td class="first">用户界面</td>
+                                <td>MF3.0UI</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">CPU品牌</td>
+                                <td>高通</td>
+                            </tr>
+                            <tr>
+                                <td class="first">CPU型号</td>
+                                <td>骁龙8974AC</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">CPU频率</td>
+                                <td>2.5Ghz</td>
+                            </tr>
+                            <tr>
+                                <td class="first">CPU核数</td>
+                                <td>四核</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>网络</strong>
+                            </th>
+                            <tr class="oddTd">
+                                <td class="first">双卡机类型</td>
+                                <td>双卡双待双通双4G</td>
+                            </tr>
+                            <tr>
+                                <td class="first">4G网络制式</td>
+                                <td>移动4G、联通4G、电信4G</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">3G网络制式</td>
+                                <td>移动3G、联通3G、电信3G</td>
+                            </tr>
+                            <tr>
+                                <td class="first">2G网络制式</td>
+                                <td>移动2G、联通2G、电信2G</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>存储</strong>
+                            </th>
+                            <tr class="oddTd">
+                                <td class="first">机身内存</td>
+                                <td>16GB</td>
+                            </tr>
+                            <tr>
+                                <td class="first">运行内存</td>
+                                <td>3GB</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">最大存储扩展</td>
+                                <td>128GB</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>显示</strong>
+                            </th>
+                            <tr>
+                                <td class="first">屏幕尺寸</td>
+                                <td>5.5英寸</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">分辨率</td>
+                                <td>1920*1080</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>感应器</strong>
+                            </th>
+                            <tr>
+                                <td class="first">GPS模块</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">重力感应</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr>
+                                <td class="first">光线感应</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">距离感应</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr>
+                                <td class="first">电子罗盘</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">陀螺仪</td>
+                                <td>支持</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>摄像功能</strong>
+                            </th>
+                            <tr>
+                                <td class="first">后置摄像头</td>
+                                <td>1600万</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">前置摄像头</td>
+                                <td>800万</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>传输功能</strong>
+                            </th>
+                            <tr>
+                                <td class="first">Wi-Fi</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">蓝牙</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr>
+                                <td class="first">WIFI热点</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">OTG</td>
+                                <td>支持</td>
+                            </tr>
+                            <th colspan="2" style="text-align:center;line-height:38px;">
+                                <strong>其他</strong>
+                            </th>
+                            <tr>
+                                <td class="first">SIM卡尺寸</td>
+                                <td>micro SIM</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">电池容量（mAh）</td>
+                                <td>3100</td>
+                            </tr>
+                            <tr>
+                                <td class="first">电池更换</td>
+                                <td>支持</td>
+                            </tr>
+                            <tr class="oddTd">
+                                <td class="first">机身尺寸（mm）</td>
+                                <td>154mm x 77mm x 9.8mm</td>
+                            </tr>
+            </table>
+        </div>
+		<!--规格参数-->
+		<!--用户评论-->
+		<div class="d3" style="display:none">
+			<ul class="comment_Tabhd" style="background-color: #FFF;">
+				<li><a href="javascript:;" onclick=>全部评论（{$count}）</a></li>
+				<li><a href="javascript:;" onclick=>好评（{$count0}）</a></li>
+				<li><a href="javascript:;" onclick=>中评（{$count1}）</a></li>
+                <li><a href="javascript:;" onclick=>差评（{$count2}）</a></li>
+				<li><a href="javascript:;" onclick=>有晒单的评论（0）</a></li></a>
+			<li class="mytradecomment" style="font-size:14px; float:left;"><a href="javascript:;" onclick="DBCMvcLayout.CheckLogin('/UserHome/MytradeComment?productId=311',3,311)">我要评论</a></li>
+		   </ul>
+           <div class="lun">
+			<div class="comment_Tabbd">
+				<div class="item2" id="item2">
+                
+				</div>
+               
+                <div  class="com" style="display:none"  >
+               评论 <input name="good[]" type="radio" value="1">好评
+               <input name="good[]" type="radio" value="2">中评
+               <input name="good[]" type="radio" value="3">差评<br>
+			   <div class="xinxin" style="margin:0 35px;">
+               <img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>
+               </div>                       
+			   <textarea rows="5" cols="70" style="resize:none;overflow:hidden;border-radius:20px;"></textarea><br>
+               <button class="comtj">提交</button>
+               </div>
+			   </div>
+          
+           
+           </div> 
+		</div>
+		<!--用户评论-->
+		<!--售后服务-->
+        <div class="d4" style="display:none">
+            <div class="on_sale">售后服务守则</div>
+            <div class="rule">
+                自商品售出之日（以实际收货日期为准）起7日内可以退换货，15日内可以换货，您可在线提交返修/退换申请办理退换货事宜。具体退换货标准如下：
+            </div>
+            <div class="rule_Content">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="rule_Table">
+                    <col width="154" />
+                    <col width="154" />
+                    <col width="154" />
+                    <col width="154" />
+                    <col width="154" />
+                    <col width="154" />
+                    <thead>
+                        <tr>
+                            <th>退换类别</th>
+                            <th>具体描述</th>
+                            <th>是否支持7天<br />
+                                （含）内退换货</th>
+                            <th>是否支持15天<br />
+                                （含）内换货</th>
+                            <th>返回运费</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>国家法律所规定的功能性故障或商品质量问题</td>
+                            <td>经由厂家指定或特约售后服务中心检测确认，并出具检测报告或经厂家售后确认属于商品质量问题。</td>
+                            <td class="tc">是</td>
+                            <td class="tc">是</td>
+                            <td class="tc">否</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>到货物流损、缺件或商品描述与网站不符等原因</td>
+                            <td>物流损指在运输过程中造成的损坏、破碎、性能故障，经售后人员核查情况属实。缺件指商品原装配件缺失。</td>
+                            <td class="tc">是</td>
+                            <td class="tc">是</td>
+                            <td class="tc">否</td>
+                            <td>审核期间可能需要快递人员证明或要求您提供实物照片等，以便售后快速做出判断并及时处理。</td>
+                        </tr>
+                        <tr>
+                            <td>其他原因</td>
+                            <td>除以上两种原因之外，如个人原因导致的退换货，未使用且不影响二次销售（商品原包装未拆封）。</td>
+                            <td class="tc">是</td>
+                            <td class="tc">是</td>
+                            <td class="tc">否</td>
+                            <td>由客户承担商品返回的运费。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rule_Intro">
+                <h2><em>1.</em><p>判断实际收货日期规则：</p>
+                </h2>
+                <div class="answer">
+                    <p>以客户实际签收日期为准，客户没有直接签收的以物流送达或订单/发票日期为准；</p>
+                </div>
+                <h2>
+                    <em>2.</em>
+                    <p>
+                        在商品无任何问题情况下，MYZTE承诺：自您实际收到货物日期起7日内，只要未使用且不影响二次销售，
+                            商品返回运费由您承担的情况下，可以全额退货。 特别说明，以下情况不予办理退换货：
+                    </p>
+                </h2>
+                <div class="answer">
+                    <p><em>1、</em><span>任何非MYZTE出售的商品（序列号不符）；</span></p>
+                    <p><em>2、</em><span>过保商品（超过三包保修期的商品）；</span></p>
+                    <p><em>3、</em><span>未经授权的维修、误用、碰撞、疏忽、滥用、进液、事故、改动、不正确的安装所造的商品质量问题，或撕毁、涂改标贴、机器序号、防伪标记；</span></p>
+                    <p><em>4、</em><span>无法提供商品的发票、保修卡等三包凭证或者三包凭证信息与商品不符及被涂改的；</span></p>
+                    <p><em>5、</em><span>产品已使用（质量问题除外）；</span></p>
+                    <p><em>6、</em><span>其他依法不应办理退换货的。</span></p>
+                </div>
+            </div>
+            <div class="rule_Intro">
+                <h3>售后服务细则</h3>
+                <h2>退换货时限</h2>
+                <div class="answer">
+                    <p>产品自售出之日（以实际收货日期为准）起7日内可退货，15日内可换货；</p>
+                </div>
+                <h2>退换货原因</h2>
+                <div class="answer">
+                    <p>商品质量问题或不影响二次销售的退货；</p>
+                </div>
+                <h2>处理流程</h2>
+                <div class="answer">
+                    <p>
+                        <em>1、</em>
+                        <span>属于质量问题的，将厂家售后服务中心开具的检测报告（维修检验单据）、附件、说明书、发票、保卡、购物凭证、包装、
+                                问题商品（主板类产品需写明故障原因），一并返回我司办理退换货手续。
+                        </span>
+                    </p>
+                    <p>
+                        <em>2、</em>
+                        <span>如果顾客在使用时对商品质量表示置疑，请出具书面鉴定，我们会按照国家法律规定予以处理。</span>
+                    </p>
+                    <p>
+                        <em>3、</em>
+                        <span>对于存储类商品，厂家概不提供数据导出服务，请务必在返修前将里面的数据自行导出，否则若有数据遗失、损坏等厂家概
+                                不承担相应的责任。
+                        </span>
+                    </p>
+                </div>
+                <h2>注意事项</h2>
+                <div class="answer">
+                    <p>
+                        <em>1、</em>
+                        <span>手机等通过软件升级可以排除的故障，只要送至当地生产厂家指定或特约售后服务中心升级即可，不予退换货。</span>
+                    </p>
+                    <p>
+                        <em>2、</em>
+                        <span>如当地无ZTE授权检测、维修中心的，退回工厂帮助顾客代检代修，检测周期为：代检7到15天，代修30天，自售后收货时间起算。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--售后服务-->
+		<!--包装清单-->
+         <div class="d5" style="display:none">
+                <span>商家还没有给出清单哦！</span>
+         </div>
+		<!--包装清单-->
+     </div>
+    </div>
+<!--传值参数：1.商品信息  2.商品清单-->
+
+    </div>
+</div>
+<div class="clr"></div>
+
+
+<script type="text/javascript">
+    function get(ob){
+	      switch(ob){
+		     case 1:
+			    $('#det1').siblings().css('background','#FFFFFF');
+			    $('#det1').css('background','#F6F6F6');
+				$('.d1').css('display','block');
+				$('.tabb>div:not(.d1,)').css('display','none');
+			 break;
+			 case 2:
+			    $('#det2').siblings().css('background','#FFFFFF');
+			    $('#det2').css('background','#F6F6F6');
+				$('.d2').css('display','block');
+				$('.tabb>div:not(.d2)').css('display','none');
+				
+			 break;
+			 case 3:
+			    $('#det3').siblings().css('background','#FFFFFF');
+			    $('#det3').css('background','#F6F6F6');
+				$('.d3').css('display','block');
+				$('.tabb>div:not(.d3)').css('display','none');
+			 break; 
+		     case 4:
+			    $('#det4').siblings().css('background','#FFFFFF');
+			    $('#det4').css('background','#F6F6F6');
+				$('.d4').css('display','block');
+				$('.tabb>div:not(.d4)').css('display','none');
+			 break; 
+		     case 5:
+			    $('#det5').siblings().css('background','#FFFFFF');
+			    $('#det5').css('background','#F6F6F6');
+				$('.d5').css('display','block');
+				$('.tabb>div:not(.d5)').css('display','none');
+			 break; 		  	  
+		  }  
+	   }
+    $("#det3").click(function(){   
+        var typeid={$_GET['id']};
+        getlun(typeid);        
+       }) 
+    function getlun(typeid){     
+       var data={"gid":typeid};
+       $.post("__APP__/comment/comment.html",data,function(d){
+                   var html = '';                   
+                   for(var i in d){
+         
+                   if(d[i].com_level=="1"){
+                        
+                    var gg= "<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+                    html +="<div class=\"comlist\" >"+"<div class='left'>"+" <p style='color:orange'>"+d[i].username+"</p>"+"<p>"+d[i].ptime+"</p></div>"+"<div class='right'>"
+                    + "<div class='message'>"+"<b>评分：</b>"
+                    +gg+"</div>" 
+                    +"<div class='message'>"+"<b>评论：</b>"+ d[i].com_contain+"</div>"
+                     +"<div class='message'>"+"<b>商城回复：</b> 您好，感谢您对中兴手机商城的支持和关注，祝您生活愉快"+"</div>"+"</div>"+"</div>"
+                  }                 
+                  if(d[i].com_level=="2"){
+                        
+                    var gg= "<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+                    html +="<div class=\"comlist\" >"+"<div class='left'>"+" <p style='color:orange'>"+d[i].username+"</p>"+"<p>"+d[i].ptime+"</p></div>"+"<div class='right'>"
+                    + "<div class='message'>"+"<b>评分：</b>"
+                    +gg+"</div>" 
+                    +"<div class='message'>"+"<b>评论：</b>"+ d[i].com_contain+"</div>"
+                     +"<div class='message'>"+"<b>商城回复：</b> 您好，感谢您对中兴手机商城的支持和关注，祝您生活愉快"+"</div>"+"</div>"+"</div>"
+                  } 
+                  if(d[i].com_level=="3"){
+                        
+                    var gg= "<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+                    html +="<div class=\"comlist\" >"+"<div class='left'>"+" <p style='color:orange'>"+d[i].username+"</p>"+"<p>"+d[i].ptime+"</p></div>"+"<div class='right'>"
+                    + "<div class='message'>"+"<b>评分：</b>"
+                    +gg+"</div>" 
+                    +"<div class='message'>"+"<b>评论：</b>"+ d[i].com_contain+"</div>"
+                     +"<div class='message'>"+"<b>商城回复：</b> 您好，感谢您对中兴手机商城的支持和关注，祝您生活愉快"+"</div>"+"</div>"+"</div>"
+                  } 
+                   }
+                 
+                    $(".item2").html(html);
+                    $(".comlist:even").css("background","#fff");
+                    $(".comlist:odd").css("background","#F5F5F8"); 
+                 $(".d3").find("li:first").addClass("papapa").siblings().removeClass("papapa");
+                    },"json");}
+        $(".d3 li").click(function(){
+                $(this).addClass("papapa").siblings().removeClass("papapa");
+                });
+        $(".d3" ).find("li:first").click(function(){
+                var typeid={$_GET['id']};          
+                var papa='';
+            papa +="<div style='margin:50px 50%'><img style='width:20px'src='/xm1/Public/home/images/progressBar_s.gif' ></div>"
+            $(".item2").html(papa);
+                getlun(typeid);
+        })
+        
+        $(".d3 li").eq(1).click(function(){
+            var typeid={$_GET['id']}; 
+            var level=1    
+         
+             var   papa='';
+             
+            papa +="<div style='margin:50px 50%'><img style='width:20px'src='/xm1/Public/home/images/progressBar_s.gif' ></div>"
+            $(".item2").html(papa);
+            getlun1(level);
+        })
+        $(".d3 li").eq(2).click(function(){
+                    
+
+            var typeid={$_GET['id']}; 
+             var  level=2      
+             var   papa='';
+            papa +="<div style='margin:50px 50%'><img style='width:20px'src='/xm1/Public/home/images/progressBar_s.gif' ></div>"
+            $(".item2").html(papa);
+            getlun2(level);
+        })
+           function getlun2(level){
+        var typeid={$_GET['id']}; 
+        var data={"gid":typeid,"level":level};
+       $.post("__APP__/comment/comment1.html",data,function(d){
+                   var html = '';                   
+                   for(var i in d){    
+                    var gg= "<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+                    html +="<div class=\"comlist\" >"+"<div class='left'>"+" <p style='color:orange'>"+d[i].username+"</p>"+"<p>"+d[i].ptime+"</p></div>"+"<div class='right'>"
+                    + "<div class='message'>"+"<b>评分：</b>"
+                    +gg+"</div>" 
+                    +"<div class='message'>"+"<b>评论：</b>"+ d[i].com_contain+"</div>"
+                     +"<div class='message'>"+"<b>商城回复：</b> 您好，感谢您对中兴手机商城的支持和关注，祝您生活愉快"+"</div>"+"</div>"+"</div>"
+                  }                 
+              
+                 
+                    $(".item2").html(html);
+                    $(".comlist:even").css("background","#fff");
+                    $(".comlist:odd").css("background","#F5F5F8"); 
+                    $(".d3 li").eq(2).addClass("papapa").siblings().removeClass("papapa");
+                    },"json");}
+        
+        $(".d3 li").eq(3).click(function(){
+            var typeid={$_GET['id']}; 
+             var  level=3
+             var   papa='';
+            papa +="<div style='margin:50px 50%'><img style='width:20px'src='/xm1/Public/home/images/progressBar_s.gif' ></div>"
+            $(".item2").html(papa);
+            getlun3(level);
+        })
+           function getlun3(level){
+        var typeid={$_GET['id']}; 
+        var data={"gid":typeid,"level":level};
+       $.post("__APP__/comment/comment1.html",data,function(d){
+                   var html = '';                   
+                   for(var i in d){    
+                    var gg= "<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+                    html +="<div class=\"comlist\" >"+"<div class='left'>"+" <p style='color:orange'>"+d[i].username+"</p>"+"<p>"+d[i].ptime+"</p></div>"+"<div class='right'>"
+                    + "<div class='message'>"+"<b>评分：</b>"
+                    +gg+"</div>" 
+                    +"<div class='message'>"+"<b>评论：</b>"+ d[i].com_contain+"</div>"
+                     +"<div class='message'>"+"<b>商城回复：</b> 您好，感谢您对中兴手机商城的支持和关注，祝您生活愉快"+"</div>"+"</div>"+"</div>"
+                  }                 
+              
+                 
+                    $(".item2").html(html);
+                    $(".comlist:even").css("background","#fff");
+                    $(".comlist:odd").css("background","#F5F5F8"); 
+                    $(".d3 li").eq(3).addClass("papapa").siblings().removeClass("papapa");
+                    },"json");}
+        
+           function getlun1(level){
+        var typeid={$_GET['id']}; 
+        var data={"gid":typeid,"level":level};
+       $.post("__APP__/comment/comment1.html",data,function(d){
+                   var html = '';                   
+                   for(var i in d){    
+                    var gg= "<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+                    html +="<div class=\"comlist\" >"+"<div class='left'>"+" <p style='color:orange'>"+d[i].username+"</p>"+"<p>"+d[i].ptime+"</p></div>"+"<div class='right'>"
+                    + "<div class='message'>"+"<b>评分：</b>"
+                    +gg+"</div>" 
+                    +"<div class='message'>"+"<b>评论：</b>"+ d[i].com_contain+"</div>"
+                     +"<div class='message'>"+"<b>商城回复：</b> 您好，感谢您对中兴手机商城的支持和关注，祝您生活愉快"+"</div>"+"</div>"+"</div>"
+                  }                 
+              
+                 
+                    $(".item2").html(html);
+                    $(".comlist:even").css("background","#fff");
+                    $(".comlist:odd").css("background","#F5F5F8"); 
+                    $(".d3 li").eq(1).addClass("papapa").siblings().removeClass("papapa");
+                    },"json");}
+                    
+        $(".d3 li").eq(2).click(function(){
+            var papa='';
+        $('.item2').empty();
+        })
+       
+       
+        $(".d3 li").eq(5).click(function(){
+            var user="{$_SESSION['user']}"
+          if (user==""){
+            alert("请先登录再评论")
+            return false;
+          }else{
+                    $('.com').css("display","block");       
+          }
+            
+        })
+        $(".d3 button").click(function(){
+         var user="{$_SESSION['user']['id']}"
+         var gid="{$_GET['id']}"
+          var good=  $("input[checked]").val();  
+     
+         var typeid=gid;
+         var content=$(".d3 textarea").val();
+		  alert('评论成功') 
+         $(".com textarea").val("");
+         var  data={"uid":user,"content":content,"gid":gid,"good":good};
+           $.post("__APP__/comment/add.html",data,function(d){
+      
+            var  html=""
+            html +="全部评论（"+d[0]+"）"
+            var  htmla=""
+            htmla +="好评（"+d[1]+"）"
+            var  htmlb=""
+            htmlb +="中评（"+d[2]+"）"
+            var  htmlc=""
+            htmlc +="差评（"+d[3]+"）"
+            
+            $(".d3 a").eq(0).html(html)
+            $(".d3 a").eq(1).html(htmla)
+            $(".d3 a").eq(2).html(htmlb)
+            $(".d3 a").eq(3).html(htmlc)
+            $(".tabhd span").html("("+d[0]+")")  
+			getlun(typeid);  
+           },"json")
+          
+        })
+		  $(".com input").eq(0).click(function(){
+           var  html=""
+            html +="<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+            $(".xinxin").html(html);
+        }) 
+        $(".com input").eq(1).click(function(){
+           var  html=""
+            html +="<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'><img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+            $(".xinxin").html(html);
+        }) 
+        $(".com input").eq(2).click(function(){
+           var  html=""
+            html +="<img src='/xm1/Public/home/images/yLeft.png'><img src='/xm1/Public/home/images/yRight.png'>"
+            $(".xinxin").html(html);
+        })
+</script>
+
+<script type="text/javascript">
+	$(function(){			
+	   $(".jqzoom").jqueryzoom({
+			xzoom:400,
+			yzoom:400,
+			offset:10,
+			position:"right",
+			preload:1,
+			lens:1
+		});
+		$("#spec-list").jdMarquee({
+			deriction:"left",
+			width:350,
+			height:56,
+			step:2,
+			speed:4,
+			delay:10,
+			control:true,
+			_front:"#spec-right",
+			_back:"#spec-left"
+		});
+		$("#spec-list img").bind("mouseover",function(){
+			var src=$(this).attr("src");
+			$("#spec-n1 img").eq(0).attr({
+				src:src.replace("\/n5\/","\/n1\/"),
+				jqimg:src.replace("\/n5\/","\/n0\/")
+			});
+			$(this).css({
+				"border":"2px solid #ff6600",
+				"padding":"1px"
+			});
+		}).bind("mouseout",function(){
+			$(this).css({
+				"border":"1px solid #ccc",
+				"padding":"2px"
+			});
+		});				
+	})
+	
+
+var id = $('#cart').prev().attr('data');
+
+
+//判断商品的库存
+$('#cart').click(function(){
+var uid = "{$_SESSION['user']['id']}";
+if(!uid){
+window.location.href = "__APP__/Login/index";
+return false;
+}
+var nums = $('#txtQty').val();
+var urll = "__APP__/Index/cart";
+var qtys = $('#stock').attr('data');
+var num = parseInt(nums);
+var qty = parseInt(qtys);
+if(num > qty){
+alert('亲,此款商品库存不足');
+}else{
+	$.ajax({
+	   type: "POST",
+	   url: "__APP__/Index/cart",
+	   data: {'id':id,'num':num},
+	   dataType:'json',
+	   async:false});
+}
+window.location.href = urll;
+});
+
+//判断套餐的选择
+$('#t1').click(function(){
+	$(this).css('background','#F6F6F6');
+	$('#t2').css('background','#FFFFFF');
+	$('.item:eq(0)').css('display','block');
+	$('.item:eq(1)').css('display','none');
+});
+$('#t2').click(function(){
+	$(this).css('background','#F6F6F6');
+	$('#t1').css('background','#FFFFFF');
+	$('.item:eq(1)').css('display','block');
+	$('.item:eq(0)').css('display','none');
+});
+
+
+//套餐加入购物车确认
+function gets(ob){
+var uid = "{$_SESSION['user']['id']}";
+if(!uid){
+window.location.href = "__APP__/Login/index";
+return false;
+}
+var nums = $('#txtQty').val();
+var qtys = $('#stock').attr('data');
+var num = parseInt(nums);
+var qty = parseInt(qtys);
+var urll = "__APP__/Index/cart";
+
+if(num > qty){
+alert('亲,此款商品库存不足');
+}else{
+	if(ob == 28){
+		$.ajax({
+			type: "POST",
+			url: "__APP__/Index/cart",
+			data: {'id':id,'num':num,'tc':'30'},
+			dataType:'json',
+			async:false});
+	}
+	if(ob == 46){
+	     $.ajax({
+			type: "POST",
+			url: "__APP__/Index/cart",
+			data: {'id':id,'num':num,'tc':'112'},
+			dataType:'json',
+			async:false});
+	}
+}
+window.location.href = urll;
+}
+</script>
+</block>
+

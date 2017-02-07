@@ -1,0 +1,163 @@
+<extend name="Public:layout"/>
+<block name="main-content">
+		<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__APP__/index/index">主页</a>
+							</li>
+
+							<li>
+								<a href="#">用户管理</a>
+							</li>
+							<li class="active">用户列表</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span>
+									用户名：<input type="text" name="username" class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<input type="submit" class="btn btn-pink btn-xs"  value="搜索">
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								用户管理
+								<small>
+									<i class="icon-double-angle-right"></i>
+									用户列表
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th>id</th>
+														<th>用户名</th>
+														<th>性别</th>
+														<th>真实姓名</th>
+														<th>注册时间</th>
+														<th>注册IP</th>
+														<th>电话号码</th>
+														<th class="hidden-480">邮箱</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+
+												<tbody>
+												<foreach name="data" item="user">
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace"  name="ids[]"/>
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">{$user.id}</a>
+														</td>
+														<td>{$user.username }</td>
+														<td>
+															<eq name="user.sex" value="1">男</eq>
+															<eq name="user.sex" value="2">女</eq>
+															<eq name="user.sex" value="3">保密</eq>
+														</td>
+														<td>{$user.truename}</td>
+														<td>{$user.rtime|date="Y-m-d",###}</td>
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">{$user.rip}</span>
+														</td>
+														<td>{$user.telphone}</td>
+														<td>{$user.email}</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+															
+
+																<a href="__CONTROLLER__/mod/id/{$user.id}" class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</a>
+
+																<a href="__CONTROLLER__/del/id/{$user.id}" class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</a>
+
+																
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-cog icon-only bigger-110"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+										
+                                               </foreach>
+												</tbody>
+											</table>
+											<div class="tres">{$pageinfo}</div>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+
+						
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+
+</block>

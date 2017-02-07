@@ -1,0 +1,32 @@
+<extend name="Public:layout"/>
+<block name="main-content">
+<br>
+<script type="text/javascript">
+			try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+		</script>
+
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home home-icon"></i>
+				<a href="__APP__/index/index">主页</a>
+			</li>
+
+			<li>
+				<a href="#">用户管理</a>
+			</li>
+			<li class="active">用户修改</li>
+		</ul><!-- .breadcrumb -->
+<br><br>		
+        <form action="__CONTROLLER__/mod" method="post" accept-charset="utf-8">
+            <p>&nbsp;用户名： <input type="text" value="{$user.username}" name="username"></p>
+            <p>&nbsp;性&nbsp; 别: <input type="text" name="sex" value="{$user.sex}"></p>
+            <p>&nbsp;密　码： <input type="password" name="password"></p>
+            <p>&nbsp;确认密码:<input type="password" name="repassword"></p>
+            <p>&nbsp;真实姓名:<input type="text" name="truename" value="{$user.truename}"></p>
+            <p>&nbsp;邮&nbsp;箱： <input type="text" name="email" value="{$user.email}"></p>
+            <p>&nbsp;电话号码:<input type="text" name="telphone" value="{$user.telphone}"></p>
+            <input type="hidden" name="id" value="{$user['id']}">
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="sub" value="修改"></p>
+        </form>
+</block>
+
