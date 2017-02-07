@@ -201,4 +201,29 @@ class IndexController extends Controller
         $this -> assign('cit',$aa);
         $this -> display();
     }
+	
+	
+	public function address_add(){
+	if($_POST)	
+	{ $user = M('user_detail');
+      $data['province'] = $_POST['province'];
+      $data['city'] = $_POST['city'];
+      $data['county'] = $_POST['county'];
+      $data['txtStreet'] = $_POST['txtStreet'];
+	  $address = $_POST['province'].$_POST['city'].$_POST['county'].$_POST['txtStreet'];
+   	  $data['detailaddr'] = $address;
+	  $data['uid'] = $_SESSION['user']['id'];
+	  $data['name'] = $_POST['txtName'];
+	  $data['postcode'] = $_POST['txtZip'];
+	  $data['telphone'] = $_POST['txtCell'];
+	  $userid = $_SESSION['user']['id'];
+	if($user -> create($data))
+	{
+		$user ->add();  
+		$res = $user ->where('uid='.$userid)->select();
+        $this -> ajaxReturn($res,'JSON');
+	} 	  
+	}		
+	}
+	
 }
