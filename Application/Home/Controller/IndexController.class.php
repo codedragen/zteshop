@@ -27,6 +27,7 @@ class IndexController extends Controller
             $where['id'] = array('in', $ids);
             $looked = $user->where($where)->select();
             $this->assign('looked', $looked);
+
         }
         $this->assign('data', $user->where('id>=45 and id<=49')->select());
         $count = $user->where("vest='{$vs}' and id>5 and id<45")->count();
@@ -329,5 +330,124 @@ class IndexController extends Controller
         $this->assign('info',$ordernum);
         $this ->display();
     }
+
+    public function phones(){
+        $a=I('rance');
+
+        $goods=M('goods');
+        if ($_SESSION['lookedid']){
+            $_SESSION['lookedid']=array_unique($_SESSION['lookedid']);
+            $idarr=$_SESSION['lookedid'];
+            if (count($idarr)>5){
+                array_shift($idarr);
+
+            }
+            $ids = implode(',',$idarr);
+            $where['id'] = array('IN',$ids);
+            $looked = $goods->where($where)->select();
+            $this->assign('looked',$looked);
+
+
+            $data2=$goods->where("id<5")->select();
+            $this->assign('data2',$data2);
+            $count=$goods->where("rance='{$a}'")->count();
+            $Page= new \Think\Page($count,6);
+            $data=$goods->where("rance='{$a}'and id>5")->order('id')->limit($Page->firstRow.','.$Page->listRows)->select();
+            $this->assign("page",$Page->show());
+            $this->assign('data',$data);
+            $this->display();
+        }
+
+
+
+    }
+
+    public function pm(){
+        $n=$_POST['n'];
+        $phone=M('goods');
+        $rance=$_POST['rance'];
+        $vest=$_POST['vest'];
+
+        $count=$phone->where("rance='{$rance}' and id>5 and id<45")->count();
+        $Page= new \Think\Page($count,6);
+        $this->assign("page",$Page->show());
+        switch ($n){
+            case 0:
+                $data=$phone->where("rance='{$rance}' and id>5 and id<45")->order('uptime')->limit($Page->firstRow.','.$Page->listRows)->select();
+                $this->assign("page",$Page->show());
+                $this->ajaxReturn($data);
+                break;
+            case 1:
+                $data=$phone->where("rance='{$rance}' and id>5 and id<45 ")->order('price desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+                $this->ajaxReturn($data);
+                break;
+            case 2:
+                $data=$phone->where("rance='{$rance}' and id>5 and id<45")->order('bynum desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+                $this->ajaxReturn($data);
+                break;
+            case 3:
+                $data=$phone->where("rance='{$rance}' and id>5 and id<45")->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+                $this->ajaxReturn($data);
+                break;
+        }
+
+
+    }
+
+
+    public function saler_mode()
+    {
+        $a=I('rance');
+        $phone = M('goods');
+        if($_SESSION['lookedid']){
+            $_SESSION['lookedid'] = array_unique($_SESSION['lookedid']);
+            $idarr = $_SESSION['lookedid'];
+            if(count($idarr) > 5){
+                array_shift($idarr);
+            }
+            $ids = implode(',',$idarr);
+            $where['id'] = array('IN',$ids);
+            $looked = $phone->where($where)->select();
+            $this->assign('looked',$looked);
+        }
+        $data = $phone->where("rance='{$a}'")->select();
+        $data2=$phone->where("id<5")->select();
+        $this->assign('data2',$data2);
+        $ha=$_GET['mid'];
+        if($ha==null && $a==!null)
+        {
+            $this->assign('data',$data);
+        }
+        $this->display();
+    }
+
+
+    public function large_screen(){
+        $big=I('vest');
+        $goods=M('goods');
+        if ($_SESSION['lookedid']){
+            $_SESSION['lookedid']=array_unique($_SESSION['lookedid']);
+            $idarr=$_SESSION['lookedid'];
+            if (count($idarr)>5){
+                array_shift($idarr);
+            }
+             $ids=implode(',',$idarr);
+            $where['id']=array('in',$ids);
+            $looked=$goods->where($where)->select();
+            $this->assign('looked',$looked);
+
+        }
+        $count=$goods->where("vest='{$big}' and id>5 and id<45")->count();
+        $page=new Page($count,6);
+        $data3=$goods->table('tb_goods,tb_hotgoods')->where('tb_hotgoods.hot=4 and tb_hotgoods.gid=tv_goods.id')->select();
+        $data=$goods->where("vest='{$big}' and and id>5")->order('id')->limit($page->firstRow.",".$page->listRows)->select();
+        $data2=$goods->where("id>=45 and id<=49")->select();
+        $this->assign('page',$page->show());
+        $this->assign('data2',$data2);
+        $this->assign('data',$data);
+        $this->assign('data3',$data3);
+        $this->display();
+    }
+
 
 }

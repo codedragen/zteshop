@@ -1,0 +1,326 @@
+[ 2017-02-23T13:17:08+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018001s ]
+
+[ 2017-02-23T13:17:19+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-23T13:28:02+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-23T13:28:26+08:00 ] 127.0.0.1 /index.php/index/index_pro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 非法操作:index_pro
+
+[ 2017-02-23T13:34:46+08:00 ] 127.0.0.1 /index.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-23T13:34:59+08:00 ] 127.0.0.1 /index.php/index/index_video.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:index_video
+
+[ 2017-02-23T13:35:05+08:00 ] 127.0.0.1 /index.php/index/detail/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\PhpstormProjects\myzteshop\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tb_goods` WHERE `id` IN ('23')  [ RunTime:0.027001s ]
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.006000s ]
+SQL: SELECT * FROM tb_goods a,tb_suits b WHERE ( a.id='23' and a.id=b.gid ) LIMIT 1   [ RunTime:0.022002s ]
+SQL: SHOW COLUMNS FROM `tb_comment` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='23' ) LIMIT 1   [ RunTime:0.013001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='23' and com_level=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='23' and com_level=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='23' and com_level=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tb_goods`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tb_goods` WHERE ( id=23 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tb_goods` WHERE ( id=23 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: isopen E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 3 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 140 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 141 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 142 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1279 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1289 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1380 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1420 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1528 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1529 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-23T13:35:06+08:00 ] 127.0.0.1 /index.php/index/detail/id/undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\PhpstormProjects\myzteshop\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tb_goods` WHERE `id` IN ('23','undefined')  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM tb_goods a,tb_suits b WHERE ( a.id='undefined' and a.id=b.gid ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tb_comment` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tb_goods`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'undefined' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1  
+SQL: SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'undefined' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: isopen E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 3 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 140 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 141 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 142 行.
+NOTIC: [8] Undefined offset: 1 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 574 行.
+NOTIC: [8] Undefined offset: 2 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 575 行.
+NOTIC: [8] Undefined offset: 3 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 576 行.
+NOTIC: [8] Undefined offset: 4 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 577 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1279 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1289 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1380 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1420 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1528 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1529 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-23T13:35:07+08:00 ] 127.0.0.1 /index.php/index/detail/id/undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\PhpstormProjects\myzteshop\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `tb_goods` WHERE `id` IN ('23','undefined')  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM tb_goods a,tb_suits b WHERE ( a.id='undefined' and a.id=b.gid ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tb_comment` [ RunTime:0.008001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tb_goods`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'undefined' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1  
+SQL: SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'undefined' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: isopen E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 3 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 140 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 141 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 142 行.
+NOTIC: [8] Undefined offset: 1 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 574 行.
+NOTIC: [8] Undefined offset: 2 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 575 行.
+NOTIC: [8] Undefined offset: 3 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 576 行.
+NOTIC: [8] Undefined offset: 4 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 577 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1279 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1289 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1380 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1420 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1528 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1529 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-23T13:35:14+08:00 ] 127.0.0.1 /index.php/index/detail/id/undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\PhpstormProjects\myzteshop\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `tb_goods` WHERE `id` IN ('23','undefined')  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.004001s ]
+SQL: SELECT * FROM tb_goods a,tb_suits b WHERE ( a.id='undefined' and a.id=b.gid ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tb_comment` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_comment` WHERE ( gid='undefined' and com_level=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tb_goods`  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'undefined' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1  
+SQL: SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'undefined' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( id=undefined ) LIMIT 1  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: isopen E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 3 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 140 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 141 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 142 行.
+NOTIC: [8] Undefined offset: 1 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 574 行.
+NOTIC: [8] Undefined offset: 2 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 575 行.
+NOTIC: [8] Undefined offset: 3 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 576 行.
+NOTIC: [8] Undefined offset: 4 E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 577 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1279 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1289 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1380 行.
+NOTIC: [8] Undefined index: user E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1420 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1528 行.
+NOTIC: [8] Undefined variable: config E:\PhpstormProjects\myzteshop\Application\Runtime\Cache\Home\1223f42a89e823bf89547594651162de.php 第 1529 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-23T14:00:10+08:00 ] 127.0.0.1 /index.php/large_screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Large_screen
+
+[ 2017-02-23T14:00:21+08:00 ] 127.0.0.1 /index.php/index/large_screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\PhpstormProjects\myzteshop\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tb_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tb_goods` WHERE `id` IN ('23','undefined')  [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_goods` WHERE ( vest='' and id>5 and id<45 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM tb_goods,tb_hotgoods [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'tb_hotgoods' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_goods,tb_hotgoods
+SQL: SELECT * FROM `tb_goods`,`tb_hotgoods` WHERE ( tb_hotgoods.hot=4 and tb_hotgoods.gid=tv_goods.id )  [ RunTime:0.111006s ]
+ERR: 1054:Unknown column 'tv_goods.id' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tb_goods`,`tb_hotgoods` WHERE ( tb_hotgoods.hot=4 and tb_hotgoods.gid=tv_goods.id ) 
+SQL: SELECT * FROM `tb_goods` WHERE ( vest='' and and id>5 ) ORDER BY id LIMIT 0,6   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and id>5 ) ORDER BY id LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `tb_goods` WHERE ( vest='' and and id>5 ) ORDER BY id LIMIT 0,6  
+SQL: SELECT * FROM `tb_goods` WHERE ( id>=45 and id<=49 )  [ RunTime:0.001000s ]
+ERR: 模板不存在:./Application/Home/View/Index/large_screen.html
+
